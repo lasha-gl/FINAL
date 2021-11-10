@@ -13,7 +13,6 @@ function myFunction() {
 }
 
 
-
 // burger
 
 let navigation = document.getElementById('navigation');
