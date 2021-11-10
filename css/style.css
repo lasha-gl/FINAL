@@ -1,0 +1,328 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+body {
+    background-color: #102b4e;
+}
+
+/* HOME PAGE*/
+.div-header {
+    padding-left: 25px;
+    padding-right: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #102b4e;
+}
+
+.img-logo {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.ul-search {
+    width: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.a-class {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+.btn-class{
+    position: absolute;
+    color: white;
+    margin-left: 80%;
+    font-size: 30px;    
+    display: none;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+  
+#Btn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+
+#Btn:hover {
+    background: #ddd;
+    color: black;
+}
+
+.h1-home {
+      color: red;
+      font-size: 45px;
+      font-family: 'Anton', sans-serif;
+}
+
+.par-class {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 24px;
+}
+
+
+
+/* ABOUT PAGE */
+.position-block {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.text-position4 {
+    font-size: 20px;
+    position: absolute;
+    width: 250;
+    top: 25px;
+    left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.text-position3 {
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    bottom: 50px;
+    left: 50PX;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* GALLERY PAGE */
+.gallery-central-block{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.gallery-container {
+    max-width: 1000px;
+    width: 100%;
+    height: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top:50px;
+}
+
+.gallery-div {
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.gallery-img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+
+/* CONTACT PAGE */
+.contact-section-block {
+    background: rgba(192,192,192,0.3);
+    width: 100%;
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: absolute;
+    top: 50px;
+}
+
+.left-block-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 200px;
+    margin-left: 50px;
+    position: absolute;   
+}
+
+.li-contact {
+    font-size: 25px;  
+}
+
+.spanc {
+    font-size: 25px;
+    color: #808080;    
+}
+
+.contact-type {
+    color: white;
+    font-size: 25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.map {
+    position: relative;
+    left: 700px;
+    top: 50px;
+    width: 600px;
+    height: 400px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.relative-1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.img-contact {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* FOOTER */
+.div-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #102b4e;
+    color: #343638;
+}
+
+.footer-social {
+    margin: 0 auto;
+}
+
+.fa-facebook-square {
+    margin-top: 25px;
+    margin-right: 50px;
+    color: white;
+    font-size: 50px;
+}
+
+.fa-twitter-square {
+    margin-top: 25px;
+    margin-right: 50px;
+    color: white;
+    font-size: 50px;
+}
+
+.fa-instagram-square {
+    margin-top: 25px;
+    margin-right: 50px;
+    color:  white;
+    font-size: 50px;
+}
+
+.fa-youtube-square {
+    margin-top: 25px;
+    margin-right: 50px;
+    color: white;
+    font-size: 50px;
+}
+
+
+
+/* HOVERS AND SPANS */
+
+.span-nav {
+    color: red;
+}
+
+.gallery-img:hover{
+  width: 350px;
+}
+
+.a-class:hover {
+  color: red;
+}
+
+.fa-facebook-square:hover {
+color: #3b5998;
+}
+
+.fa-youtube-square:hover {
+  color: #FF0000;
+}
+
+.fa-twitter-square:hover {
+color: #1DA1F2;
+}
+
+.fa-instagram-square:hover {
+  color:  #bc2a8d;
+}
