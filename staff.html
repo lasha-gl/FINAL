@@ -16,15 +16,15 @@
     <meta property="og:title"              content="MUSTANG" />
     <meta property="og:description"        content="FORD MUSTANG 2021" />
     <meta property="og:image"              content="pic/f9.jpg">
-
                    <!-- დალინკვები -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="gallery.html">
     <link rel="stylesheet" href="contact.html">
-    <link rel="stylesheet" href="staff.html">
+    <link rel="stylesheet" href="about.html">
+    
 
 
                     <!-- თაითლი -->
@@ -51,31 +51,31 @@
 <body>
     <header>
         
-        <div class="div-header " id="toggleButton">
+        <div class="div-header">
             <a href="index.html">
                 <img class="img-logo" src="pic/fordlogo.png" alt="logo">
             </a>
             <nav>
-                <ul class="ul-search" id="navigation-ul">
+                <ul class="ul-search" id="navigation">
 
                   <li class="li-class">
-                      <a class="a-class line1" href="index.html">HOME</a>
+                      <a class="a-class" href="index.html">HOME</a>
                   </li>
 
                   <li class="li-class">
-                      <a class="a-class line1" href="about.html">ABOUT</a>
+                      <a class="a-class" href="about.html">ABOUT</a>
                   </li>
                 
                   <li class="li-class">
-                      <a class="a-class line1" href="gallery.html"><span class="span-nav">GALLERY</span></a>
+                      <a class="a-class" href="gallery.html">GALLERY</a>
                   </li>
 
                   <li class="li-class">
-                      <a class="a-class line1" href="contact.html">CONTACT</a>
+                      <a class="a-class" href="contact.html">CONTACT</a>
                   </li>
 
                   <li class="li-class">
-                    <a class="a-class line1" href="staff.html">STAFF</a>
+                    <a class="a-class" href="staff.html"><span class="span-nav">STAFF</span></a>
                 </li>
                 </ul>
             </nav>
@@ -83,18 +83,24 @@
                 <i class="fas fa-bars"></i>
             </div>
         </div>
-        
     </header>
+
+
     
-    <section class="slider-wrapper" id="slider_wrapper">
-        <button class="arrow arrow-left" id="arrow-left"><i class="fas fa-arrow-alt-circle-left"></i></button>
 
+        <section class="staff-list">
+                <div class="guide-content" id="guide-content">
+                    <ul id="guide-ul"></ul>
+                </div>
+                <div class="contact-loadmore">
+                    <span></span>
+                    <button id="loadMore">Load More</button>
+                    <span></span>
+                </div>
+            </div>
+        </section>
 
-        <div class="slider-content" id="slider-content"></div>
-
-
-        <button class="arrow arrow-right" id="arrow-right"><i class="fas fa-arrow-alt-circle-right"></i></button>
-    </section>
+    
     <footer>
         <div class="div-footer">
             <div class="footer-social">
@@ -107,5 +113,5 @@
 
         </div>
     </footer>
-    <script src="java/script.js"></script>
-    </body>
+    <script src="java/list.js"></script>
+</body>

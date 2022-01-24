@@ -326,3 +326,144 @@ color: #1DA1F2;
 .fa-instagram-square:hover {
   color:  #bc2a8d;
 }
+
+/* STAFF */
+
+.staff-list{
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: red;
+    border-radius: 2%;
+}
+.guide-content ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+}
+.guide-img_wrapper{
+    max-width: 150px;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 0.7em;
+}
+.guide-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.guide-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #191919;
+}
+.guide-content_wrp{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#loadMore{
+    background-color: red;
+    color: white;
+    max-width: 100px;
+    width: 100%;
+    height: 40px;
+    /* font-family: 'Ubuntu'; */
+    font-weight: 700;
+    border: 0.14em solid white;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin: 4em 1.5em;
+}
+#loadMore:hover{
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+.guide-span_wrapper{
+    font-weight: bold;
+}
+.guide-span_wrapper span:nth-child(1){
+    margin-right: 0.3em;
+}
+.guide-email_wrapper{
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+.guide-list:hover{
+    color: white;
+    cursor: pointer;
+}
+.guide-wrp h2{
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    margin: -0.5em 0 2.5em;
+}
+.contact-loadmore{
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-loadmore span{
+    height: 0.5px;
+    width: 100%;
+    background-color: #BEBEBE;
+    margin: 2.81em 0 2.81em;
+    opacity: 50%;
+}
+
+
+
+
+
+/* gallery slide */
+
+.slide {
+    display: block;
+    width: 100%;
+}
+.image-wrapper {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.slider-wrapper {
+    position: relative;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: white;
+    background-color: red;
+    font-size: 30px;
+}
+
+.arrow.arrow-right {
+ right: 30px;
+}
+.arrow.arrow-left {
+    left: 30px;
+}
+
+.title {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+}
+
+
