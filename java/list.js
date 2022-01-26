@@ -1,87 +1,72 @@
-'use strict';
-
-
 let currentPage = 1;
 
-function getUserInfo(page){
-    fetch('https://reqres.in/api/users?page=' + page, {
-     method: 'GET'
-    })
-    .then (function(response) {
-        if(response.status !== 200) {
-            throw response.status;
-        }
-        return response.json();
-    })
-    .then(function(responseData) {
+let totalPages;
 
-    responseData.data.forEach(element => {
+function getUsersInfo(page) {
 
-        let li = document.createElement('li');
-        li.classList.add('guide-list');
+    function render() {
+        let response = this.responseText;
+        let responseData = JSON.parse(response);
 
-        let guideImgWrapper = document.createElement('div');
-        guideImgWrapper.classList.add('guide-img_wrapper')
+        var fragment = document.createDocumentFragment();
 
-        let guideSpanWrapper = document.createElement('div');
-        guideSpanWrapper.classList.add('guide-span_wrapper');
+        responseData.data.forEach( item => {
+            let li = document.createElement('li');
 
-        let guideEmailWrapper = document.createElement('div');
-        guideEmailWrapper.classList.add('guide-email_wrapper');
+            let p = document.createElement('p');
+            p.textContent = item.first_name;
 
-        let guideImg = document.createElement('img');
-        guideImg.src = element.avatar;
-        guideImg.classList.add('guide-img');
-        
-        let guideName = document.createElement('span');
-        guideName.textContent = element.first_name;
+            let img = document.createElement('img');
+            img.src = item.avatar;
+            img.classList.add('image-block');
 
-        let guideLastname = document.createElement('span');
-        guideLastname.textContent = element.last_name;
+            let span = document.createElement('span');
+            span.textContent = item.email;
 
-        let guideEmail = document.createElement('span');
-        guideEmail.textContent = element.email;
-        
-        guideImgWrapper.appendChild(guideImg);
-        guideSpanWrapper.appendChild(guideName);
-        guideSpanWrapper.appendChild(guideLastname);
-        guideEmailWrapper.appendChild(guideEmail)
+            li.appendChild(img);
+            li.appendChild(p);
+            li.appendChild(span);
 
-        li.appendChild(guideImgWrapper);
-        li.appendChild(guideSpanWrapper);
-        li.appendChild(guideEmailWrapper);
+            fragment.appendChild(li);
+        })
 
-        document.getElementById('guide-ul').appendChild(li);
-    })
+        document.getElementById('list').innerHTML = ' ';
+        document.getElementById('list').appendChild(fragment);
 
-    })
-    .catch(function(error) { 
-        if(error == 404){
-            let spanError = document.createElement('span');
-            spanError.textContent = 'Page Not Found';
-            document.getElementById('guide-wrapper').appendChild(spanError)
-        } else {
-        console.log('Server Error');
-        }
-    })
+        totalPages = responseData.total_pages;
+    }
+
+    function error() {
+
+    }
+
+
+    let requist = new XMLHttpRequest();
+    requist.addEventListener('load',render);
+    requist.addEventListener('error', error);
+    requist.open('GET', 'https://reqres.in/api/users?page=' + page);
+    requist.send();
+
 }
 
-document.getElementById('loadMore').addEventListener('click', function() {
+document.getElementById('prev').addEventListener('click', function() {
+    if (currentPage == 1) {
+        return;
+    }
+    currentPage -= 1;
+    // currentPage = currentPage - 1
+
+    getUsersInfo(currentPage);
+});
+
+
+document.getElementById('next').addEventListener('click', function() {
+    if (currentPage == totalPages) {
+        return;
+    }
     currentPage += 1;
 
-    getUserInfo(currentPage);
+    getUsersInfo(currentPage);
 });
 
-getUserInfo(currentPage);
-
-let loadMore = document.getElementById('loadMore');
-let currentUserBox = 1;
-
-loadMore.addEventListener('click', function(){
-    let userBox = document.querySelectorAll('.guide-list');
-    currentUserBox += userBox.length;
-
-    if(currentUserBox >= userBox.length){
-        event.target.style.display = 'none';
-    }
-});
+getUsersInfo();

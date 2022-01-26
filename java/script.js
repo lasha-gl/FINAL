@@ -164,9 +164,6 @@ setSlide();
 
 
 
-// from server
-
-
 
 
 
